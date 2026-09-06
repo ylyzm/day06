@@ -36,7 +36,7 @@ select c.title 课程名, count(*) 预约人数
 from bookings b
 join courses c on b.course_id = c.id
 group by c.title
-order by count(*) desc
+order by count(*) desc;
 
 -- 第 6 关 LEFT JOIN：找出从未约过课的"沉睡会员"名单
 
@@ -44,5 +44,5 @@ select  m.name 姓名 ,count(*) 约课次数
 from bookings b
 join members m on b.card_id = m.card_id
 group by m.name
-having count(*) <1
+having count(*) <1;
 

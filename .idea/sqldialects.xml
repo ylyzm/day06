@@ -6,5 +6,6 @@
     <file url="file://$PROJECT_DIR$/SQL/DQL.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/SQL/fitgym_data.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL/groupby.sql" dialect="MySQL" />
+    <file url="PROJECT" dialect="MySQL" />
   </component>
 </project>
