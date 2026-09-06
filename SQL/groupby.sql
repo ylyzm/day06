@@ -24,3 +24,16 @@ select  level 等级,count(level) 数量
 from members
 group by level
 having count(level) >= 2;
+
+-- 第 4 关 两表 JOIN：查出会员"张三"的所有约课记录（课程名+约课时间）
+select mb.name 姓名,cur.title 课程名, bk.booking_time 约课时间
+from members mb,courses cur,bookings bk
+where mb.card_id = bk.card_id and cur.id = bk.course_id and mb.name = '张三'
+
+-- 第 5 关 三表 JOIN+分组：课程约课人次排行榜——每门课的约课人次，按人次倒序（课程名 + 人次）
+
+select c.title,count(card_id)
+from bookings b
+join courses c on b.course_id = c.id
+
+having count(card_id)>=2
