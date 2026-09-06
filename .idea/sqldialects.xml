@@ -3,6 +3,7 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/.idea/queries/Query.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL/DML.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL/DQL.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/SQL/fitgym_data.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL/groupby.sql" dialect="MySQL" />
   </component>

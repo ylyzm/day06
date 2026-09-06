@@ -32,8 +32,17 @@ where mb.card_id = bk.card_id and cur.id = bk.course_id and mb.name = '张三';
 
 -- 第 5 关 三表 JOIN+分组：课程约课人次排行榜——每门课的约课人次，按人次倒序（课程名 + 人次）
 
-select c.title,count(card_id)
+select c.title 课程名, count(*) 预约人数
 from bookings b
 join courses c on b.course_id = c.id
+group by c.title
+order by count(*) desc
 
-having count(card_id)>=2
+-- 第 6 关 LEFT JOIN：找出从未约过课的"沉睡会员"名单
+
+select  m.name 姓名 ,count(*) 约课次数
+from bookings b
+join members m on b.card_id = m.card_id
+group by m.name
+having count(*) <1
+
